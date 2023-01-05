@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pickable : MonoBehaviour
 {
     public int scoreAmount = 2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +38,6 @@ public class Pickable : MonoBehaviour
             scoreManager.score += scoreAmount;
             Destroy(gameObject); // buradaki game object bu scripptin takýlý olduðu game object
         }
-        
+
     }
 }

@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour
     private Transform target;
     [SerializeField] private float speedOfEnemy = 3f;
     [SerializeField] private float stopDistance = 1f;
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,18 +20,28 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(target);
-        
-
-        float distance = Vector3.Distance(transform.position, target.position);
-        print(distance);
-        if (distance > stopDistance)
+        if (target != null)
         {
-            transform.position += transform.forward * speedOfEnemy * Time.deltaTime;
+            transform.LookAt(target);   
+            float distance = Vector3.Distance(transform.position, target.position);
+            
+            if (distance > stopDistance)
+            {
+                transform.position += transform.forward * speedOfEnemy * Time.deltaTime;
+            }
         }
-      
-
+       
     }
-     
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player" && target !=null )
+        {           
+            Destroy(collision.gameObject);
+            TimeManager timeManager = FindObjectOfType<TimeManager>();
+            //timeManager.gameOver = true;
+            
+        }
+    }
+
   
 }

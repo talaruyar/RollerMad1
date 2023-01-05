@@ -27,10 +27,13 @@ public class CameraFollow : MonoBehaviour
         fixed update update'den sonra, fiziksel hesaplamalardan sonra çalýþýr. o yüzden bu gariplik yaþanmaz
                  */
 
-
-        Vector3 targetToMove = target.position + offsetVector;
-        transform.position = Vector3.Lerp(transform.position, targetToMove, cameraFollowSpeed * Time.deltaTime);
-        transform.LookAt(target.transform.position);
+        if (target != null)
+        {
+            Vector3 targetToMove = target.position + offsetVector;
+            transform.position = Vector3.Lerp(transform.position, targetToMove, cameraFollowSpeed * Time.deltaTime);
+            transform.LookAt(target.transform.position);
+        }
+       
     }
 
     private Vector3 CalculateOffset(Transform newTarget)
