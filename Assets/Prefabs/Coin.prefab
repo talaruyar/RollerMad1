@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 2295145968023468026}
   - component: {fileID: 2295145968023468025}
   - component: {fileID: 2295145968023468024}
-  - component: {fileID: 2295145968023468023}
   - component: {fileID: 2295145968023468022}
   - component: {fileID: 2295145968023468027}
+  - component: {fileID: 2955063206791635803}
+  - component: {fileID: 7533728146573122466}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coin
@@ -28,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2295145968023468021}
-  m_LocalRotation: {x: -0.51319695, y: 0.5127508, z: -0.48646867, w: 0.48689204}
+  m_LocalRotation: {x: -0.513198, y: 0.51274645, z: -0.486471, w: 0.48689315}
   m_LocalPosition: {x: 0.15, y: 0.76, z: 3.57}
   m_LocalScale: {x: 1, y: 0.06, z: 1}
   m_Children: []
@@ -84,19 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2295145968023468023
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2295145968023468021}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0000002, y: 2.0000002, z: 1.0000002}
-  m_Center: {x: 0.00000005960465, y: 0, z: -0.00000008940697}
 --- !u!114 &2295145968023468022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,3 +111,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angle: {x: 0, y: 1, z: 0}
+--- !u!54 &2955063206791635803
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2295145968023468021}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &7533728146573122466
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2295145968023468021}
+  m_Material: {fileID: 13400000, guid: 6ab97d389a3b6464a9655cf7e3fc4e80, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5000003
+  m_Height: 2.0000048
+  m_Direction: 1
+  m_Center: {x: 0.000000059604666, y: 6.589224e-14, z: -0.000000089406996}

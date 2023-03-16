@@ -29,8 +29,9 @@ public class Enemy : MonoBehaviour
             {
                 transform.position += transform.forward * speedOfEnemy * Time.deltaTime;
             }
+
         }
-       
+        
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -41,6 +42,7 @@ public class Enemy : MonoBehaviour
             //timeManager.gameOver = true;
             
         }
+
     }
 
   

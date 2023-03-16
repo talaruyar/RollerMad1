@@ -27,7 +27,7 @@ public class Pickable : MonoBehaviour
             scoreManager.score += scoreAmount;
             Destroy(gameObject); // buradaki game object bu scripptin takýlý olduðu game object
         }
-       
+      
     }
 
     private void OnCollisionEnter(Collision collision)

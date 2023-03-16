@@ -24,14 +24,18 @@ public class Block : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        if (isCollided == false)
+        if (collision.gameObject.tag == "Player")
         {
-            GetComponent<MeshRenderer>().material.color = Color.red;
-            ScoreManager scoreManager = FindObjectOfType<ScoreManager>();
-            scoreManager.score--;
-            print(scoreManager.score);
-            isCollided = true;
+            if (isCollided == false)
+            {
+                GetComponent<MeshRenderer>().material.color = Color.red;
+                ScoreManager scoreManager = FindObjectOfType<ScoreManager>();
+                scoreManager.score--;
+                print(scoreManager.score);
+                isCollided = true;
+            }
         }
+       
        
     }
 }
